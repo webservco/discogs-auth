@@ -11,6 +11,6 @@ final class AccessToken extends \WebServCo\DiscogsAuth\AbstractAppAuth implement
      */
     public function getAuthHeader()
     {
-        throw new \WebServCo\DiscogsAuth\Exceptions\DiscogsAuthException('Functionality not implemented.');
+        throw new \WebServCo\DiscogsAuth\Exceptions\AuthException('Functionality not implemented.');
     }
 }

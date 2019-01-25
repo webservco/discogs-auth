@@ -1,7 +1,7 @@
 <?php
 namespace WebServCo\DiscogsAuth\Exceptions;
 
-class DiscogsAuthException extends \WebServCo\Framework\Exceptions\ApplicationException
+class AuthException extends \WebServCo\Framework\Exceptions\ApplicationException
 {
     const CODE = 0;
 
