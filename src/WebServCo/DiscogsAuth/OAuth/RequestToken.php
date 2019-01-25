@@ -11,5 +11,6 @@ final class RequestToken extends \WebServCo\DiscogsAuth\AbstractAppAuth implemen
      */
     public function getAuthHeader()
     {
+        throw new \WebServCo\DiscogsAuth\Exceptions\DiscogsAuthException('Functionality not implemented.');
     }
 }

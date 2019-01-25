@@ -10,5 +10,6 @@ final class User extends \WebServCo\DiscogsAuth\AbstractAppAuth implements
      */
     public function getAuthHeader()
     {
+        throw new \WebServCo\DiscogsAuth\Exceptions\DiscogsAuthException('Functionality not implemented.');
     }
 }
