@@ -16,5 +16,10 @@ final class User implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
      */
     public function getAuthHeader()
     {
+        return sprintf(
+            '%s token=%s',
+            \WebServCo\DiscogsAuth\AuthType::DISCOGS,
+            $this->personalAccessToken
+        );
     }
 }
