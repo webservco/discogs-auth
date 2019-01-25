@@ -10,6 +10,11 @@ final class App extends \WebServCo\DiscogsAuth\AbstractAppAuth implements
      */
     public function getAuthHeader()
     {
-        throw new \WebServCo\DiscogsAuth\Exceptions\AuthException('Functionality not implemented.');
+        return sprintf(
+            '%s key=%s, secret=%s',
+            \WebServCo\DiscogsAuth\AuthType::DISCOGS,
+            $this->consumerKey,
+            $this->consumerSecret
+        );
     }
 }
