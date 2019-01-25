@@ -1,13 +1,13 @@
 <?php
 namespace WebServCo\DiscogsAuth\OAuth;
 
-final class OAuth extends \WebServCo\DiscogsAuth\AbstractAppAuth implements
+final class AccessToken extends \WebServCo\DiscogsAuth\AbstractAppAuth implements
     \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
     /**
      * Get Authorization Header.
-     * This is the main header used in any authenticated requests.
-     * Reference: Step 5 of Discogs OAuth Flow.
+     * Used in oauth/access_token endpoint requests.
+     * Reference: Step 4 of Discogs OAuth Flow.
      */
     public function getAuthHeader()
     {
