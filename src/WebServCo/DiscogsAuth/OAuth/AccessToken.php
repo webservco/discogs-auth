@@ -1,8 +1,7 @@
 <?php
 namespace WebServCo\DiscogsAuth\OAuth;
 
-final class AccessToken extends \WebServCo\DiscogsAuth\AbstractAppAuth implements
-    \WebServCo\DiscogsAuth\Interfaces\AuthInterface
+final class AccessToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
     /**
      * Get Authorization Header.

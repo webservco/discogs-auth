@@ -1,9 +1,17 @@
 <?php
 namespace WebServCo\DiscogsAuth\Discogs;
 
-final class App extends \WebServCo\DiscogsAuth\AbstractAppAuth implements
-    \WebServCo\DiscogsAuth\Interfaces\AuthInterface
+final class App implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
+    protected $consumerKey;
+    protected $consumerSecret;
+
+    public function __construct($consumerKey, $consumerSecret)
+    {
+        $this->consumerKey = $consumerKey;
+        $this->consumerSecret = $consumerSecret;
+    }
+
     /**
      * Get Authorization Header.
      * Reference: Discogs Auth Flow.

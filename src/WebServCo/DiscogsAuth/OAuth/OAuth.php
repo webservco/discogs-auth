@@ -1,8 +1,7 @@
 <?php
 namespace WebServCo\DiscogsAuth\OAuth;
 
-final class OAuth extends \WebServCo\DiscogsAuth\AbstractAppAuth implements
-    \WebServCo\DiscogsAuth\Interfaces\AuthInterface
+final class OAuth implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
     /**
      * Get Authorization Header.
