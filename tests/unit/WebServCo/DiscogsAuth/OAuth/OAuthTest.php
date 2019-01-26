@@ -11,7 +11,7 @@ final class OAuthTest extends TestCase
      */
     public function dummyPassingTest()
     {
-        $oAuth = new OAuth('foo', 'bar');
+        $oAuth = new OAuth('foo', 'bar', 'baz', 'qux');
         $this->assertTrue($oAuth instanceof OAuth);
     }
 }
