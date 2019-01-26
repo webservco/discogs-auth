@@ -3,15 +3,15 @@ namespace WebServCo\DiscogsAuth\OAuth;
 
 final class RequestToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
-    protected $callbackUrl;
+    protected $callback;
     protected $consumerKey;
     protected $consumerSecret;
 
-    public function __construct($consumerKey, $consumerSecret, $callbackUrl)
+    public function __construct($consumerKey, $consumerSecret, $callback)
     {
         $this->consumerKey = $consumerKey;
         $this->consumerSecret = $consumerSecret;
-        $this->callbackUrl = $callbackUrl;
+        $this->callback = $callback;
     }
 
     /**
@@ -34,7 +34,7 @@ final class RequestToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterf
             $this->consumerSecret,
             'PLAINTEXT',
             time(),
-            $this->callbackUrl
+            $this->callback
         );
     }
 }
