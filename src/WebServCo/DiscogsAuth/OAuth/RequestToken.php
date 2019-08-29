@@ -22,12 +22,12 @@ final class RequestToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterf
     public function getAuthHeader()
     {
         return sprintf(
-            '%s oauth_consumer_key="%s",
-            oauth_nonce="%s",
-            oauth_signature="%s&",
-            oauth_signature_method="%s",
-            oauth_timestamp="%s",
-            oauth_callback="%s"',
+            '%s oauth_consumer_key="%s",'.
+            'oauth_nonce="%s",'.
+            'oauth_signature="%s&",'.
+            'oauth_signature_method="%s",'.
+            'oauth_timestamp="%s",'.
+            'oauth_callback="%s"',
             \WebServCo\DiscogsAuth\AuthType::OAUTH,
             $this->consumerKey,
             mt_rand(),

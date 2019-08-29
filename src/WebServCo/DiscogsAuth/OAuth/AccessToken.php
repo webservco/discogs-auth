@@ -26,13 +26,13 @@ final class AccessToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterfa
     public function getAuthHeader()
     {
         return sprintf(
-            '%s oauth_consumer_key="%s",
-            oauth_nonce="%s",
-            oauth_token="%s",
-            oauth_signature="%s&%s",
-            oauth_signature_method="%s",
-            oauth_timestamp="%s",
-            oauth_verifier="%s"',
+            '%s oauth_consumer_key="%s",'.
+            'oauth_nonce="%s",'.
+            'oauth_token="%s",'.
+            'oauth_signature="%s&%s",'.
+            'oauth_signature_method="%s",'.
+            'oauth_timestamp="%s",'.
+            'oauth_verifier="%s"',
             \WebServCo\DiscogsAuth\AuthType::OAUTH,
             $this->consumerKey,
             mt_rand(),

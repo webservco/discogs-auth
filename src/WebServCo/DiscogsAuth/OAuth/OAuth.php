@@ -24,12 +24,12 @@ final class OAuth implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
     public function getAuthHeader()
     {
         return sprintf(
-            '%s oauth_consumer_key="%s",
-            oauth_nonce="%s",
-            oauth_token="%s",
-            oauth_signature="%s&%s",
-            oauth_signature_method="%s",
-            oauth_timestamp="%s"',
+            '%s oauth_consumer_key="%s",'.
+            'oauth_nonce="%s",'.
+            'oauth_token="%s",'.
+            'oauth_signature="%s&%s",'.
+            'oauth_signature_method="%s",'.
+            'oauth_timestamp="%s"',
             \WebServCo\DiscogsAuth\AuthType::OAUTH,
             $this->consumerKey,
             mt_rand(),
