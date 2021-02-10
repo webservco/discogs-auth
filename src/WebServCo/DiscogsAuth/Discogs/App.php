@@ -5,10 +5,10 @@ namespace WebServCo\DiscogsAuth\Discogs;
 final class App implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
 
-    protected $consumerKey;
-    protected $consumerSecret;
+    protected string $consumerKey;
+    protected string $consumerSecret;
 
-    public function __construct($consumerKey, $consumerSecret)
+    public function __construct(string $consumerKey, string $consumerSecret)
     {
         $this->consumerKey = $consumerKey;
         $this->consumerSecret = $consumerSecret;
@@ -18,7 +18,7 @@ final class App implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
      * Get Authorization Header.
      * Reference: Discogs Auth Flow.
      */
-    public function getAuthHeader()
+    public function getAuthHeader(): string
     {
         return \sprintf(
             '%s key=%s, secret=%s',

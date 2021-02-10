@@ -5,13 +5,17 @@ namespace WebServCo\DiscogsAuth\OAuth;
 final class OAuth implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
 
-    protected $consumerKey;
-    protected $consumerSecret;
-    protected $oauthToken;
-    protected $oauthTokenSecret;
+    protected string $consumerKey;
+    protected string $consumerSecret;
+    protected string $oauthToken;
+    protected string $oauthTokenSecret;
 
-    public function __construct($consumerKey, $consumerSecret, $oauthToken, $oauthTokenSecret)
-    {
+    public function __construct(
+        string $consumerKey,
+        string $consumerSecret,
+        string $oauthToken,
+        string $oauthTokenSecret
+    ) {
         $this->consumerKey = $consumerKey;
         $this->consumerSecret = $consumerSecret;
         $this->oauthToken = $oauthToken;
@@ -23,7 +27,7 @@ final class OAuth implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
      * This is the main header used in any authenticated requests.
      * Reference: Step 5 of Discogs OAuth Flow.
      */
-    public function getAuthHeader()
+    public function getAuthHeader(): string
     {
         return \sprintf(
             '%s oauth_consumer_key="%s",'.

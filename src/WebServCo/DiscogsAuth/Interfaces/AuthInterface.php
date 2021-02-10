@@ -5,5 +5,5 @@ namespace WebServCo\DiscogsAuth\Interfaces;
 interface AuthInterface
 {
 
-    public function getAuthHeader();
+    public function getAuthHeader(): string;
 }

@@ -5,9 +5,9 @@ namespace WebServCo\DiscogsAuth\Discogs;
 final class User implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
 
-    protected $personalAccessToken;
+    protected string $personalAccessToken;
 
-    public function __construct($personalAccessToken)
+    public function __construct(string $personalAccessToken)
     {
         $this->personalAccessToken = $personalAccessToken;
     }
@@ -16,7 +16,7 @@ final class User implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
      * Get Authorization Header.
      * Reference: Discogs Auth Flow.
      */
-    public function getAuthHeader()
+    public function getAuthHeader(): string
     {
         return \sprintf('%s token=%s', \WebServCo\DiscogsAuth\AuthType::DISCOGS, $this->personalAccessToken);
     }

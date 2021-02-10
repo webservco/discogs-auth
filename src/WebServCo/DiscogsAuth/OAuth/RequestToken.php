@@ -5,11 +5,11 @@ namespace WebServCo\DiscogsAuth\OAuth;
 final class RequestToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
 
-    protected $callback;
-    protected $consumerKey;
-    protected $consumerSecret;
+    protected string $callback;
+    protected string $consumerKey;
+    protected string $consumerSecret;
 
-    public function __construct($consumerKey, $consumerSecret, $callback)
+    public function __construct(string $consumerKey, string $consumerSecret, string $callback)
     {
         $this->consumerKey = $consumerKey;
         $this->consumerSecret = $consumerSecret;
@@ -21,7 +21,7 @@ final class RequestToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterf
      * Used in oauth/request_token endpoint requests.
      * Reference: Step 2 of Discogs OAuth Flow.
      */
-    public function getAuthHeader()
+    public function getAuthHeader(): string
     {
         return \sprintf(
             '%s oauth_consumer_key="%s",'.

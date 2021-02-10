@@ -5,14 +5,19 @@ namespace WebServCo\DiscogsAuth\OAuth;
 final class AccessToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
 
-    protected $consumerKey;
-    protected $consumerSecret;
-    protected $oauthToken;
-    protected $oauthTokenSecret;
-    protected $oauthVerifier;
+    protected string $consumerKey;
+    protected string $consumerSecret;
+    protected string $oauthToken;
+    protected string $oauthTokenSecret;
+    protected string $oauthVerifier;
 
-    public function __construct($consumerKey, $consumerSecret, $oauthToken, $oauthTokenSecret, $oauthVerifier)
-    {
+    public function __construct(
+        string $consumerKey,
+        string $consumerSecret,
+        string $oauthToken,
+        string $oauthTokenSecret,
+        string $oauthVerifier
+    ) {
         $this->consumerKey = $consumerKey;
         $this->consumerSecret = $consumerSecret;
         $this->oauthToken = $oauthToken;
@@ -25,7 +30,7 @@ final class AccessToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterfa
      * Used in oauth/access_token endpoint requests.
      * Reference: Step 4 of Discogs OAuth Flow.
      */
-    public function getAuthHeader()
+    public function getAuthHeader(): string
     {
         return \sprintf(
             '%s oauth_consumer_key="%s",'.
