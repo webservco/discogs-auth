@@ -1,4 +1,5 @@
-<?php
+<?php declare(strict_types = 1);
+
 namespace WebServCo\DiscogsAuth\Exceptions;
 
 class AuthException extends \WebServCo\Framework\Exceptions\ApplicationException

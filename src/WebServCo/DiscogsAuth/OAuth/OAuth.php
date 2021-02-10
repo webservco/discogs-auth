@@ -1,4 +1,5 @@
-<?php
+<?php declare(strict_types = 1);
+
 namespace WebServCo\DiscogsAuth\OAuth;
 
 final class OAuth implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface

@@ -1,4 +1,5 @@
-<?php
+<?php declare(strict_types = 1);
+
 namespace WebServCo\DiscogsAuth\Discogs;
 
 final class App implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
