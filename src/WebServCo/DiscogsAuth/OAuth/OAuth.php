@@ -4,6 +4,7 @@ namespace WebServCo\DiscogsAuth\OAuth;
 
 final class OAuth implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
+
     protected $consumerKey;
     protected $consumerSecret;
     protected $oauthToken;
@@ -24,7 +25,7 @@ final class OAuth implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
      */
     public function getAuthHeader()
     {
-        return sprintf(
+        return \sprintf(
             '%s oauth_consumer_key="%s",'.
             'oauth_nonce="%s",'.
             'oauth_token="%s",'.
@@ -33,12 +34,12 @@ final class OAuth implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
             'oauth_timestamp="%s"',
             \WebServCo\DiscogsAuth\AuthType::OAUTH,
             $this->consumerKey,
-            mt_rand(),
+            \mt_rand(),
             $this->oauthToken,
             $this->consumerSecret,
             $this->oauthTokenSecret,
             'PLAINTEXT',
-            time()
+            \time()
         );
     }
 }

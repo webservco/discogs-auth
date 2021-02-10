@@ -4,6 +4,7 @@ namespace WebServCo\DiscogsAuth\Discogs;
 
 final class User implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
+
     protected $personalAccessToken;
 
     public function __construct($personalAccessToken)
@@ -17,10 +18,6 @@ final class User implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
      */
     public function getAuthHeader()
     {
-        return sprintf(
-            '%s token=%s',
-            \WebServCo\DiscogsAuth\AuthType::DISCOGS,
-            $this->personalAccessToken
-        );
+        return \sprintf('%s token=%s', \WebServCo\DiscogsAuth\AuthType::DISCOGS, $this->personalAccessToken);
     }
 }

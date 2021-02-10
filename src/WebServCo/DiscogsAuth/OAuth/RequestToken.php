@@ -4,6 +4,7 @@ namespace WebServCo\DiscogsAuth\OAuth;
 
 final class RequestToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
+
     protected $callback;
     protected $consumerKey;
     protected $consumerSecret;
@@ -22,7 +23,7 @@ final class RequestToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterf
      */
     public function getAuthHeader()
     {
-        return sprintf(
+        return \sprintf(
             '%s oauth_consumer_key="%s",'.
             'oauth_nonce="%s",'.
             'oauth_signature="%s&",'.
@@ -31,10 +32,10 @@ final class RequestToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterf
             'oauth_callback="%s"',
             \WebServCo\DiscogsAuth\AuthType::OAUTH,
             $this->consumerKey,
-            mt_rand(),
+            \mt_rand(),
             $this->consumerSecret,
             'PLAINTEXT',
-            time(),
+            \time(),
             $this->callback
         );
     }

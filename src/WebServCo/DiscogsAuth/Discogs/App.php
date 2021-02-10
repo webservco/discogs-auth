@@ -4,6 +4,7 @@ namespace WebServCo\DiscogsAuth\Discogs;
 
 final class App implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
+
     protected $consumerKey;
     protected $consumerSecret;
 
@@ -19,7 +20,7 @@ final class App implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
      */
     public function getAuthHeader()
     {
-        return sprintf(
+        return \sprintf(
             '%s key=%s, secret=%s',
             \WebServCo\DiscogsAuth\AuthType::DISCOGS,
             $this->consumerKey,
