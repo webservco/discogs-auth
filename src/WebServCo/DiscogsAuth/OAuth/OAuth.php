@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 namespace WebServCo\DiscogsAuth\OAuth;
 
@@ -30,11 +32,11 @@ final class OAuth implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
     public function getAuthHeader(): string
     {
         return \sprintf(
-            '%s oauth_consumer_key="%s",'.
-            'oauth_nonce="%s",'.
-            'oauth_token="%s",'.
-            'oauth_signature="%s&%s",'.
-            'oauth_signature_method="%s",'.
+            '%s oauth_consumer_key="%s",' .
+            'oauth_nonce="%s",' .
+            'oauth_token="%s",' .
+            'oauth_signature="%s&%s",' .
+            'oauth_signature_method="%s",' .
             'oauth_timestamp="%s"',
             \WebServCo\DiscogsAuth\AuthType::OAUTH,
             $this->consumerKey,
