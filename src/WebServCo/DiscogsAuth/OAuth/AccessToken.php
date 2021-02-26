@@ -50,7 +50,7 @@ final class AccessToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterfa
             $this->oauthTokenSecret,
             'PLAINTEXT',
             \time(),
-            $this->oauthVerifier
+            $this->oauthVerifier,
         );
     }
 }

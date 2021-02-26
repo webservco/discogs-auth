@@ -45,7 +45,7 @@ final class OAuth implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
             $this->consumerSecret,
             $this->oauthTokenSecret,
             'PLAINTEXT',
-            \time()
+            \time(),
         );
     }
 }

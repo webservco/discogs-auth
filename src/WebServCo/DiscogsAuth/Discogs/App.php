@@ -26,7 +26,7 @@ final class App implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
             '%s key=%s, secret=%s',
             \WebServCo\DiscogsAuth\AuthType::DISCOGS,
             $this->consumerKey,
-            $this->consumerSecret
+            $this->consumerSecret,
         );
     }
 }

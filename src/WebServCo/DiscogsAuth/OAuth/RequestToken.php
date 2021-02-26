@@ -38,7 +38,7 @@ final class RequestToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterf
             $this->consumerSecret,
             'PLAINTEXT',
             \time(),
-            $this->callback
+            $this->callback,
         );
     }
 }
