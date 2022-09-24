@@ -6,7 +6,6 @@ namespace WebServCo\DiscogsAuth\OAuth;
 
 final class RequestToken implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
-
     protected string $callback;
     protected string $consumerKey;
     protected string $consumerSecret;

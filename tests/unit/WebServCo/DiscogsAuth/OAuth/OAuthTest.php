@@ -9,7 +9,6 @@ use WebServCo\DiscogsAuth\OAuth\OAuth;
 
 final class OAuthTest extends TestCase
 {
-
     /**
      * @test
      */

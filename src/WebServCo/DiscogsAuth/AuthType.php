@@ -6,7 +6,6 @@ namespace WebServCo\DiscogsAuth;
 
 class AuthType
 {
-
     public const DISCOGS = 'Discogs';
     public const OAUTH = 'OAuth';
 }

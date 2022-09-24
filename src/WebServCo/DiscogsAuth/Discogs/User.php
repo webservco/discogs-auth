@@ -6,7 +6,6 @@ namespace WebServCo\DiscogsAuth\Discogs;
 
 final class User implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
-
     protected string $personalAccessToken;
 
     public function __construct(string $personalAccessToken)

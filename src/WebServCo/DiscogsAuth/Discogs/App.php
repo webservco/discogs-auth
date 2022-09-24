@@ -6,7 +6,6 @@ namespace WebServCo\DiscogsAuth\Discogs;
 
 final class App implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
-
     protected string $consumerKey;
     protected string $consumerSecret;
 

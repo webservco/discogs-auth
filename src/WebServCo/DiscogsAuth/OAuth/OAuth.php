@@ -6,7 +6,6 @@ namespace WebServCo\DiscogsAuth\OAuth;
 
 final class OAuth implements \WebServCo\DiscogsAuth\Interfaces\AuthInterface
 {
-
     protected string $consumerKey;
     protected string $consumerSecret;
     protected string $oauthToken;
